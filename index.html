@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deliksite by ESD Labs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="bg-gray-100  font-sans">
+    <section class="layout">
+        <div class="header">
+            <div class="max-w-4xl mx-auto py-12">
+                <h1 class="text-3xl font-bold mb-6">Deliksite: Instala tus programas favoritos desde el Terminal!</h1>
+                <p class="mb-6">Selecciona los programas que deseas instalar:</p>
+                <p class="mb-6"><strong>¡IMPORTANTE!</strong> Es necesario tener previamente instalado <strong><a
+                            href="https://chocolatey.org/" target="_blank" rel="noopener">Chocolatey</a></strong> en tu
+                    sistema.</p>
+            </div>
+            <hr>
+
+            <div class="main max-w-4xl mx-auto">
+                <form id="program-form">
+                    <!-- Navegadores -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold mb-4 text-black">Navegadores</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div>
+                                <input type="checkbox" id="chrome" name="programs" value="googlechrome" class="mr-2">
+                                <label for="chrome">Google Chrome</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="firefox" name="programs" value="firefox" class="mr-2">
+                                <label for="firefox">Firefox</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="edge" name="programs" value="microsoft-edge" class="mr-2">
+                                <label for="edge">Microsoft Edge</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="brave" name="programs" value="brave" class="mr-2">
+                                <label for="brave">Brave</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="opera" name="programs" value="opera"
+                                    class="mr-2">
+                                <label for="opera">Opera</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="opera-gx" name="programs" value="opera-gx"
+                                    class="mr-2">
+                                <label for="opera-gx">Opera GX</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- Social y Comunicación -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold mb-4 text-black">Social y Comunicación</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div>
+                                <input type="checkbox" id="discord" name="programs" value="discord" class="mr-2">
+                                <label for="discord">Discord</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="telegram" name="programs" value="telegram" class="mr-2">
+                                <label for="telegram">Telegram</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="signal" name="programs" value="signal" class="mr-2">
+                                <label for="signal">Signal</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="thunderbird" name="programs" value="thunderbird"
+                                    class="mr-2">
+                                <label for="thunderbird">Thunderbird</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="claws-mail" name="programs" value="claws-mail"
+                                    class="mr-2">
+                                <label for="claws-mail">Claws Mail</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="protonmailbridge" name="programs" value="protonmailbridge"
+                                    class="mr-2">
+                                <label for="protonmailbridge">Proton Mail Bridge</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- Desarrollo -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold mb-4 text-black">Desarrollo</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div>
+                                <input type="checkbox" id="vscode" name="programs" value="vscode" class="mr-2">
+                                <label for="vscode">Visual Studio Code</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="sublimetext3" name="programs" value="sublimetext3"
+                                    class="mr-2">
+                                <label for="sublimetext3">Sublime Text</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="notepadplusplus" name="programs" value="notepadplusplus"
+                                    class="mr-2">
+                                <label for="notepadplusplus">Notepad++</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="git" name="programs" value="git" class="mr-2">
+                                <label for="git">Git</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="github-desktop" name="programs" value="github-desktop"
+                                    class="mr-2">
+                                <label for="github-desktop">Github Desktop</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="nodejs" name="programs" value="nodejs" class="mr-2">
+                                <label for="nodejs">Node.JS</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="ruby" name="programs" value="ruby" class="mr-2">
+                                <label for="ruby">Ruby</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="eclipse" name="programs" value="eclipse" class="mr-2">
+                                <label for="eclipse">Eclipse</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="netbeans" name="programs" value="netbeans"
+                                    class="mr-2">
+                                <label for="netbeans">IDE Apache Net Beans</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- Bases de Datos -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold mb-4 text-black">Bases de Datos</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div>
+                                <input type="checkbox" id="mysql.workbench" name="programs" value="mysql.workbench"
+                                    class="mr-2">
+                                <label for="mysql.workbench">MySQL Workbench</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="sqlite" name="programs" value="sqlite" class="mr-2">
+                                <label for="sqlite">SQLite</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="dbeaver" name="programs" value="dbeaver"
+                                    class="mr-2">
+                                <label for="dbeaver">DBeaver</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="heidisql" name="programs" value="heidisql"
+                                    class="mr-2">
+                                <label for="heidisql">HeidiSQL</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="postgresql12" name="programs" value="postgresql12"
+                                    class="mr-2">
+                                <label for="postgresql12">PostgreSQL</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="mariadb" name="programs" value="mariadb"
+                                    class="mr-2">
+                                <label for="mariadb">MariaDB</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- Gestores de Contraseñas -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold mb-4 text-black">Gestores de Contraseñas</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div>
+                                <input type="checkbox" id="bitwarden" name="programs" value="bitwarden" class="mr-2">
+                                <label for="bitwarden">Bitwarden</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="1password" name="programs" value="1password" class="mr-2">
+                                <label for="1password">1password</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="keepassxc" name="programs" value="keepassxc" class="mr-2">
+                                <label for="keepassxc">Keepass XC</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- Utilidades -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold mb-4 text-black">Utilidades</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div>
+                                <input type="checkbox" id="7zip" name="programs" value="7zip" class="mr-2">
+                                <label for="7zip">7-Zip</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="winrar" name="programs" value="winrar" class="mr-2">
+                                <label for="winrar">WinRAR</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cpu-z" name="programs" value="cpu-z" class="mr-2">
+                                <label for="cpu-z">CPU-Z</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="siw" name="programs" value="siw" class="mr-2">
+                                <label for="siw">SIW</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="rufus" name="programs" value="rufus" class="mr-2">
+                                <label for="rufus">Rufus</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="drawio" name="programs" value="drawio" class="mr-2">
+                                <label for="drawio">Draw.io</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- Multimedia -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold mb-4 text-black">Multimedia</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div>
+                                <input type="checkbox" id="vlc" name="programs" value="vlc" class="mr-2">
+                                <label for="vlc">VLC Media Player</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="adobereader" name="programs" value="adobereader"
+                                    class="mr-2">
+                                <label for="adobereader">Adobe Reader</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="calibre" name="programs" value="calibre" class="mr-2">
+                                <label for="calibre">Calibre E-Books</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="gimp" name="programs" value="gimp" class="mr-2">
+                                <label for="gimp">GIMP</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="krita" name="programs" value="krita" class="mr-2">
+                                <label for="krita">Krita</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="avidemux" name="programs" value="avidemux" class="mr-2">
+                                <label for="avidemux">Avidemux</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+
+
+
+                    <!-- Gaming -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold mb-4 text-black">Gaming</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div>
+                                <input type="checkbox" id="steam" name="programs" value="steam" class="mr-2">
+                                <label for="steam">Steam</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="epicgameslauncher" name="programs" value="epicgameslauncher"
+                                    class="mr-2">
+                                <label for="epicgameslauncher">Epic Games Launcher</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="goggalaxy" name="programs" value="goggalaxy"
+                                    class="mr-2">
+                                <label for="goggalaxy">GOG Galaxy</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="playnite" name="programs" value="playnite"
+                                    class="mr-2">
+                                <label for="playnite">Playnite</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="retroarch" name="programs" value="retroarch"
+                                    class="mr-2">
+                                <label for="retroarch">Retroarch</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="leagueoflegends" name="programs" value="leagueoflegends"
+                                    class="mr-2">
+                                <label for="leagueoflegends">League Of Legends</label>
+                            </div>
+                        </div>
+                    </div>
+
+<hr>
+
+                    <!-- Otros -->
+                    <div class="mb-8">
+                        <h2 class="text-xl font-bold mb-4 text-black">Otros</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div>
+                                <input type="checkbox" id="todoist" name="programs" value="todoist" class="mr-2">
+                                <label for="todoist">Todoist</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="notion" name="programs" value="notion" class="mr-2">
+                                <label for="notion">Notion</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="joplin" name="programs" value="joplin" class="mr-2">
+                                <label for="joplin">Joplin</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="evernote" name="programs" value="evernote" class="mr-2">
+                                <label for="evernote">Evernote</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="exoduswallet" name="programs" value="exoduswallet"
+                                    class="mr-2">
+                                <label for="exoduswallet">Exodus Wallet</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="qbittorrent" name="programs" value="qbittorrent"
+                                    class="mr-2">
+                                <label for="qbittorrent">Qbittorrent</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-6">
+                        Descargar e Instalar
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="footer text-black">
+            <p> Created by &#129354 <strong><a href="https://esdlabs.es/">ESD Labs</a></strong> &#129354 </p>
+            <p> Sigue mi <strong><a href="https://github.com/esdlabs-tech">Github</a></strong> para ver más proyectos.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        const form = document.getElementById('program-form');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const selectedPrograms = Array.from(form.querySelectorAll('input[name="programs"]:checked'))
+                .map(checkbox => checkbox.value);
+
+            if (selectedPrograms.length > 0) {
+                const programList = selectedPrograms.join(' ');
+                const installCommand = `choco install ${programList} -y`;
+
+                alert(`Lanza el siguiente comando en tu terminal (cmd o powershell como administrador):\n\n${installCommand}`);
+            } else {
+                alert('Selecciona al menos un programa para instalar.');
+            }
+        });
+    </script>
+</body>
+
+</html>
