@@ -9,15 +9,22 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body class="bg-gray-100  font-sans">
+<body class="bg-cyan-950  font-sans">
     <section class="layout">
         <div class="header">
             <div class="max-w-4xl mx-auto py-12">
-                <h1 class="text-3xl font-bold mb-6">Deliksite: Instala tus programas favoritos desde el Terminal!</h1>
+                <img src="media/logo.jpg" alt="Deliksite" class="mx-auto">
+                <h1 class="text-3xl font-bold mb-6">¡Instala tus programas favoritos desde el Terminal!</h1>
+                <p class="mb-6">Deliksite es un sitio web simple, similar a Ninite, donde puedes elegir el software que deseas instalar desde tu terminal (PowerShell)</p>
                 <p class="mb-6">Selecciona los programas que deseas instalar:</p>
-                <p class="mb-6"><strong>¡IMPORTANTE!</strong> Es necesario tener previamente instalado <strong><a
-                            href="https://chocolatey.org/" target="_blank" rel="noopener">Chocolatey</a></strong> en tu
+                <p class="mb-6"><strong>¡IMPORTANTE!</strong> Es necesario tener previamente instalado el software <strong><a
+                    class="font-bold mb-4 text-slate-400"    href="https://chocolatey.org/" target="_blank" rel="noopener">Chocolatey</a></strong> en tu
                     sistema.</p>
+                    <br>
+                    <h2 class="text-2xl font-bold mb-6"> 🛠️ Uso </h2>
+                    <p class="mb-6"> <strong>Selecciona el software:</strong> Usa la interfaz para elegir los programas que deseas instalar. <br>
+                        <strong>Genera el comando: </strong>  Haz clic en el botón para generar un instalador personalizado, el cual contiene los comandos necesarios para instalar los programas seleccionados. <br>
+                        <strong> Ejecuta el comando: </strong> Ejecuta el comando con tu terminal como administrador (cmd o Powershell) para poder realizar la instalación del software seleccionado.</p>
             </div>
             <hr>
 
@@ -25,12 +32,14 @@
                 <form id="program-form">
                     <!-- Navegadores -->
                     <div class="mb-8">
-                        <h2 class="text-xl font-bold mb-4 text-black">Navegadores</h2>
+                        <h2 class="text-xl font-bold mb-4 text-slate-400">Navegadores</h2>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                             <div>
                                 <input type="checkbox" id="chrome" name="programs" value="googlechrome" class="mr-2">
-                                <label for="chrome">Google Chrome</label>
-                            </div>
+                                <label for="chrome" style="margin-right: 8px;">Google Chrome</label>
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/>
+                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/></svg>                            </div>
                             <div>
                                 <input type="checkbox" id="firefox" name="programs" value="firefox" class="mr-2">
                                 <label for="firefox">Firefox</label>
@@ -60,7 +69,7 @@
 
                     <!-- Social y Comunicación -->
                     <div class="mb-8">
-                        <h2 class="text-xl font-bold mb-4 text-black">Social y Comunicación</h2>
+                        <h2 class="text-xl font-bold mb-4 text-slate-400">Social y Comunicación</h2>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                             <div>
                                 <input type="checkbox" id="discord" name="programs" value="discord" class="mr-2">
@@ -96,7 +105,7 @@
 
                     <!-- Desarrollo -->
                     <div class="mb-8">
-                        <h2 class="text-xl font-bold mb-4 text-black">Desarrollo</h2>
+                        <h2 class="text-xl font-bold mb-4 text-slate-400">Desarrollo</h2>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                             <div>
                                 <input type="checkbox" id="vscode" name="programs" value="vscode" class="mr-2">
@@ -145,7 +154,7 @@
 
                     <!-- Bases de Datos -->
                     <div class="mb-8">
-                        <h2 class="text-xl font-bold mb-4 text-black">Bases de Datos</h2>
+                        <h2 class="text-xl font-bold mb-4 text-slate-400">Bases de Datos</h2>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                             <div>
                                 <input type="checkbox" id="mysql.workbench" name="programs" value="mysql.workbench"
@@ -183,7 +192,7 @@
 
                     <!-- Gestores de Contraseñas -->
                     <div class="mb-8">
-                        <h2 class="text-xl font-bold mb-4 text-black">Gestores de Contraseñas</h2>
+                        <h2 class="text-xl font-bold mb-4 text-slate-400">Gestores de Contraseñas</h2>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                             <div>
                                 <input type="checkbox" id="bitwarden" name="programs" value="bitwarden" class="mr-2">
@@ -204,7 +213,7 @@
 
                     <!-- Utilidades -->
                     <div class="mb-8">
-                        <h2 class="text-xl font-bold mb-4 text-black">Utilidades</h2>
+                        <h2 class="text-xl font-bold mb-4 text-slate-400">Utilidades</h2>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                             <div>
                                 <input type="checkbox" id="7zip" name="programs" value="7zip" class="mr-2">
@@ -237,7 +246,7 @@
 
                     <!-- Multimedia -->
                     <div class="mb-8">
-                        <h2 class="text-xl font-bold mb-4 text-black">Multimedia</h2>
+                        <h2 class="text-xl font-bold mb-4 text-slate-400">Multimedia</h2>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                             <div>
                                 <input type="checkbox" id="vlc" name="programs" value="vlc" class="mr-2">
@@ -274,7 +283,7 @@
 
                     <!-- Gaming -->
                     <div class="mb-8">
-                        <h2 class="text-xl font-bold mb-4 text-black">Gaming</h2>
+                        <h2 class="text-xl font-bold mb-4 text-slate-400">Gaming</h2>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                             <div>
                                 <input type="checkbox" id="steam" name="programs" value="steam" class="mr-2">
@@ -312,7 +321,7 @@
 
                     <!-- Otros -->
                     <div class="mb-8">
-                        <h2 class="text-xl font-bold mb-4 text-black">Otros</h2>
+                        <h2 class="text-xl font-bold mb-4 text-slate-400">Otros</h2>
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                             <div>
                                 <input type="checkbox" id="todoist" name="programs" value="todoist" class="mr-2">
@@ -341,6 +350,7 @@
                                 <label for="qbittorrent">Qbittorrent</label>
                             </div>
                         </div>
+                        <hr>
                     </div>
 
                     <button type="submit"
@@ -350,10 +360,10 @@
                 </form>
             </div>
         </div>
-
+        <br>
         <hr>
 
-        <div class="footer text-black">
+        <div class="footer text-white">
             <p> Created by &#129354 <strong><a href="https://esdlabs.es/">ESD Labs</a></strong> &#129354 </p>
             <p> Sigue mi <strong><a href="https://github.com/esdlabs-tech">Github</a></strong> para ver más proyectos.
             </p>

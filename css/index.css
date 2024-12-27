@@ -1,10 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face{
+  font-family: 'OpenSans';
+  src: url(../fonts/OpenSans/static/OpenSans-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: 'Quattrocento';
+    src: url(../fonts/Quattrocento-Regular.ttf);
+  }
 
 .layout {
     width: 100%;
-  background-color: rgba(128, 128, 128, 0.993);
+  background-color:  rgb(8 51 68);
   color: aliceblue;
     display: grid;
     grid:
@@ -16,6 +25,7 @@
   }
   
   .header { grid-area: header;
+    text-align: center;
  }
   .main { grid-area: main;
     align-items: center;
@@ -26,7 +36,25 @@ align-items: center;
 text-align: center;
 margin-bottom: 15px; }
 
+h2 {
+  font-family: 'Quattrocento', Courier, monospace;
+color: rgb(148 163 184);
+}
+
   hr {
     margin-top: 11px;
     margin-bottom: 15px;
+  }
+
+  a{
+    color: rgb(148 163 184);
+  }
+
+  a:hover{
+    color: aliceblue;
+    text-decoration: underline;
+  }
+
+  p{
+    font-family: 'OpenSans', Helvetica, sans-serif;
   }
