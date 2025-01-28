@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgb(8 51 68);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: rgb(8 51 68);
+            color: rgb(148 163 184);
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+            width: 100%;
+            text-align: center;
+        }
+        header a {
+            color: rgb(148 163 184);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header a:hover {
+            color: #fff;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .contact-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+        .contact-form h2 {
+            margin-bottom: 15px;
+        }
+        .contact-form .form-group {
+            margin-bottom: 15px;
+        }
+        .contact-form .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-form .form-group input,
+        .contact-form .form-group textarea {
+            width: 85%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form .form-group textarea {
+            resize: vertical;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background: #007BFF;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Contacto</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ayuda.html">Ayuda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="contact-form">
+        <h2>Formulario de Contacto</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

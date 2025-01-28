@@ -58,3 +58,49 @@ color: rgb(148 163 184);
   p{
     font-family: 'OpenSans', Helvetica, sans-serif;
   }
+  .header-container {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header-title {
+    font-family: 'Quattrocento', Courier, monospace;
+    color: rgb(148 163 184);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-menu li a {
+    font-family: 'OpenSans', Helvetica, sans-serif;
+    color: rgb(148 163 184);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu li a:hover {
+    color: aliceblue;
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (min-width: 768px) {
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .header-title {
+      margin-bottom: 0;
+      font-family: 'Quattrocento', Courier, monospace;
+    }
+  }
